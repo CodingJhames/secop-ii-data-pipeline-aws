@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: athena_source
+    database: awsdatacatalog
+    schema: secop_db
+    tables:
+      - name: raw
