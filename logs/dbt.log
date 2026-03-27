@@ -1,0 +1,61 @@
+[0m13:47:42.822147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75ee9120ddf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75ee902c7ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75ee920471d0>]}
+
+
+============================== 13:47:42.824555 | e0255380-ad87-42c2-b5b1-324f20d58594 ==============================
+[0m13:47:42.824555 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:47:42.824940 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'version_check': 'True', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'static_parser': 'True', 'invocation_command': 'dbt init dbt_secop', 'target_path': 'None', 'debug': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/home/james/.dbt', 'no_print': 'None', 'printer_width': '80', 'indirect_selection': 'eager', 'introspect': 'True', 'warn_error': 'None', 'empty': 'None', 'use_experimental_parser': 'False', 'write_json': 'True'}
+[0m13:47:42.831746 [info ] [MainThread]: Creating dbt configuration folder at /home/james/.dbt
+[0m13:47:42.832657 [debug] [MainThread]: Starter project path: /home/james/Documentos/secop-ii-aws/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m13:47:42.834480 [info ] [MainThread]: 
+Your new dbt project "dbt_secop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:47:42.834738 [info ] [MainThread]: Setting up your profile.
+[0m13:50:44.870442 [error] [MainThread]: Encountered an error:
+
+[0m13:50:44.871901 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/james/Documentos/secop-ii-aws/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/james/Documentos/secop-ii-aws/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/james/Documentos/secop-ii-aws/venv/lib/python3.12/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/james/Documentos/secop-ii-aws/venv/lib/python3.12/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/home/james/Documentos/secop-ii-aws/venv/lib/python3.12/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/james/Documentos/secop-ii-aws/venv/lib/python3.12/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/james/Documentos/secop-ii-aws/venv/lib/python3.12/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/james/Documentos/secop-ii-aws/venv/lib/python3.12/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/home/james/Documentos/secop-ii-aws/venv/lib/python3.12/site-packages/click/termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/james/Documentos/secop-ii-aws/venv/lib/python3.12/site-packages/click/termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m13:50:44.873987 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 182.09326, "process_in_blocks": "13920", "process_kernel_time": 0.154153, "process_mem_max_rss": "124840", "process_out_blocks": "80", "process_user_time": 1.199409}
+[0m13:50:44.874419 [debug] [MainThread]: Command `dbt init` failed at 13:50:44.874328 after 182.09 seconds
+[0m13:50:44.874767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75ee904dff80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75ee8e26fdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75ee8e254a40>]}
+[0m13:50:44.875093 [debug] [MainThread]: Flushing usage events
+[0m13:50:45.503857 [debug] [MainThread]: An error was encountered while trying to flush usage events
